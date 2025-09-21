@@ -50,11 +50,11 @@
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        font-size: clamp(2rem, 8vw, 6rem);
+        font-size: clamp(1.5rem, 8vw, 6rem);
         font-weight: 700;
         color: #fff;
-        text-shadow: 3px 3px 0px #000, 6px 6px 0px #ff0080, 9px 9px 0px #00ff80,
-          12px 12px 0px #8000ff;
+        text-shadow: 2px 2px 0px #000, 4px 4px 0px #ff0080, 6px 6px 0px #00ff80,
+          8px 8px 0px #8000ff;
         animation: bounce 2s infinite, rotate 10s linear infinite;
         z-index: 1000;
         text-align: center;
@@ -70,10 +70,10 @@
           transform: translate(-50%, -50%) translateY(0);
         }
         40% {
-          transform: translate(-50%, -50%) translateY(-30px);
+          transform: translate(-50%, -50%) translateY(-20px);
         }
         60% {
-          transform: translate(-50%, -50%) translateY(-15px);
+          transform: translate(-50%, -50%) translateY(-10px);
         }
       }
 
@@ -97,141 +97,380 @@
 
       .video {
         position: absolute;
-        width: 200px;
-        height: 150px;
-        border-radius: 15px;
-        border: 3px solid;
-        box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+        border-radius: 10px;
+        border: 2px solid;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
         animation: smoothFloat 8s ease-in-out infinite;
       }
 
-      /* Хаотичное расположение */
-      .video:nth-child(1) {
-        top: 8%;
-        left: 3%;
-        border-color: #ff0080;
-        animation-delay: 0s;
-        transform: rotate(-25deg);
+      /* Десктоп версия */
+      @media (min-width: 769px) {
+        .video {
+          width: 200px;
+          height: 150px;
+          border-width: 3px;
+        }
+
+        .video:nth-child(1) {
+          top: 8%;
+          left: 3%;
+          border-color: #ff0080;
+          animation-delay: 0s;
+          transform: rotate(-25deg);
+        }
+        .video:nth-child(2) {
+          top: 2%;
+          left: 35%;
+          border-color: #00ff80;
+          animation-delay: 1s;
+          transform: rotate(18deg);
+        }
+        .video:nth-child(3) {
+          top: 15%;
+          right: 8%;
+          border-color: #8000ff;
+          animation-delay: 2s;
+          transform: rotate(-12deg);
+        }
+        .video:nth-child(4) {
+          top: 30%;
+          left: 8%;
+          border-color: #ff8000;
+          animation-delay: 3s;
+          transform: rotate(22deg);
+        }
+        .video:nth-child(5) {
+          top: 45%;
+          right: 15%;
+          border-color: #0080ff;
+          animation-delay: 4s;
+          transform: rotate(-8deg);
+        }
+        .video:nth-child(6) {
+          bottom: 35%;
+          left: 12%;
+          border-color: #ff4757;
+          animation-delay: 5s;
+          transform: rotate(15deg);
+        }
+        .video:nth-child(7) {
+          bottom: 20%;
+          right: 25%;
+          border-color: #3742fa;
+          animation-delay: 6s;
+          transform: rotate(-20deg);
+        }
+        .video:nth-child(8) {
+          bottom: 8%;
+          left: 40%;
+          border-color: #2ed573;
+          animation-delay: 7s;
+          transform: rotate(10deg);
+        }
+        .video:nth-child(9) {
+          top: 60%;
+          left: 25%;
+          border-color: #ffa502;
+          animation-delay: 8s;
+          transform: rotate(-15deg);
+        }
+        .video:nth-child(10) {
+          top: 40%;
+          left: 45%;
+          border-color: #ff6348;
+          animation-delay: 9s;
+          transform: rotate(28deg);
+        }
+        .video:nth-child(11) {
+          bottom: 45%;
+          right: 5%;
+          border-color: #e056fd;
+          animation-delay: 10s;
+          transform: rotate(-18deg);
+        }
+        .video:nth-child(12) {
+          top: 75%;
+          right: 35%;
+          border-color: #ff3838;
+          animation-delay: 11s;
+          transform: rotate(12deg);
+        }
+        .video:nth-child(13) {
+          bottom: 12%;
+          right: 8%;
+          border-color: #17c0eb;
+          animation-delay: 12s;
+          transform: rotate(-22deg);
+        }
+        .video:nth-child(14) {
+          top: 20%;
+          left: 60%;
+          border-color: #7bed9f;
+          animation-delay: 13s;
+          transform: rotate(25deg);
+        }
+        .video:nth-child(15) {
+          bottom: 55%;
+          left: 35%;
+          border-color: #ff9f43;
+          animation-delay: 14s;
+          transform: rotate(-5deg);
+        }
+        .video:nth-child(16) {
+          top: 85%;
+          left: 8%;
+          border-color: #f8c291;
+          animation-delay: 15s;
+          transform: rotate(16deg);
+        }
       }
 
-      .video:nth-child(2) {
-        top: 2%;
-        left: 35%;
-        border-color: #00ff80;
-        animation-delay: 1s;
-        transform: rotate(18deg);
+      /* Планшет версия */
+      @media (max-width: 768px) and (min-width: 481px) {
+        .video {
+          width: 140px;
+          height: 105px;
+          border-width: 2px;
+        }
+
+        .video:nth-child(1) {
+          top: 5%;
+          left: 2%;
+          border-color: #ff0080;
+          animation-delay: 0s;
+          transform: rotate(-20deg);
+        }
+        .video:nth-child(2) {
+          top: 3%;
+          right: 2%;
+          border-color: #00ff80;
+          animation-delay: 1s;
+          transform: rotate(15deg);
+        }
+        .video:nth-child(3) {
+          top: 18%;
+          left: 30%;
+          border-color: #8000ff;
+          animation-delay: 2s;
+          transform: rotate(-10deg);
+        }
+        .video:nth-child(4) {
+          top: 32%;
+          left: 5%;
+          border-color: #ff8000;
+          animation-delay: 3s;
+          transform: rotate(18deg);
+        }
+        .video:nth-child(5) {
+          top: 28%;
+          right: 25%;
+          border-color: #0080ff;
+          animation-delay: 4s;
+          transform: rotate(-15deg);
+        }
+        .video:nth-child(6) {
+          top: 45%;
+          left: 25%;
+          border-color: #ff4757;
+          animation-delay: 5s;
+          transform: rotate(12deg);
+        }
+        .video:nth-child(7) {
+          top: 42%;
+          right: 5%;
+          border-color: #3742fa;
+          animation-delay: 6s;
+          transform: rotate(-18deg);
+        }
+        .video:nth-child(8) {
+          top: 58%;
+          left: 8%;
+          border-color: #2ed573;
+          animation-delay: 7s;
+          transform: rotate(22deg);
+        }
+        .video:nth-child(9) {
+          top: 55%;
+          right: 30%;
+          border-color: #ffa502;
+          animation-delay: 8s;
+          transform: rotate(-8deg);
+        }
+        .video:nth-child(10) {
+          top: 70%;
+          left: 35%;
+          border-color: #ff6348;
+          animation-delay: 9s;
+          transform: rotate(14deg);
+        }
+        .video:nth-child(11) {
+          bottom: 20%;
+          left: 5%;
+          border-color: #e056fd;
+          animation-delay: 10s;
+          transform: rotate(-12deg);
+        }
+        .video:nth-child(12) {
+          bottom: 18%;
+          right: 2%;
+          border-color: #ff3838;
+          animation-delay: 11s;
+          transform: rotate(20deg);
+        }
+        .video:nth-child(13) {
+          bottom: 35%;
+          left: 30%;
+          border-color: #17c0eb;
+          animation-delay: 12s;
+          transform: rotate(-16deg);
+        }
+        .video:nth-child(14) {
+          bottom: 8%;
+          left: 8%;
+          border-color: #7bed9f;
+          animation-delay: 13s;
+          transform: rotate(25deg);
+        }
+        .video:nth-child(15) {
+          bottom: 5%;
+          right: 25%;
+          border-color: #ff9f43;
+          animation-delay: 14s;
+          transform: rotate(-6deg);
+        }
+        .video:nth-child(16) {
+          bottom: 32%;
+          right: 8%;
+          border-color: #f8c291;
+          animation-delay: 15s;
+          transform: rotate(16deg);
+        }
       }
 
-      .video:nth-child(3) {
-        top: 15%;
-        right: 8%;
-        border-color: #8000ff;
-        animation-delay: 2s;
-        transform: rotate(-12deg);
-      }
+      /* Мобильная версия */
+      @media (max-width: 480px) {
+        .video {
+          width: 90px;
+          height: 70px;
+          border-width: 2px;
+        }
 
-      .video:nth-child(4) {
-        top: 30%;
-        left: 8%;
-        border-color: #ff8000;
-        animation-delay: 3s;
-        transform: rotate(22deg);
-      }
+        .main-text {
+          font-size: clamp(1.2rem, 10vw, 3rem);
+        }
 
-      .video:nth-child(5) {
-        top: 45%;
-        right: 15%;
-        border-color: #0080ff;
-        animation-delay: 4s;
-        transform: rotate(-8deg);
-      }
-
-      .video:nth-child(6) {
-        bottom: 35%;
-        left: 12%;
-        border-color: #ff4757;
-        animation-delay: 5s;
-        transform: rotate(15deg);
-      }
-
-      .video:nth-child(7) {
-        bottom: 20%;
-        right: 25%;
-        border-color: #3742fa;
-        animation-delay: 6s;
-        transform: rotate(-20deg);
-      }
-
-      .video:nth-child(8) {
-        bottom: 8%;
-        left: 40%;
-        border-color: #2ed573;
-        animation-delay: 7s;
-        transform: rotate(10deg);
-      }
-
-      .video:nth-child(9) {
-        top: 60%;
-        left: 25%;
-        border-color: #ffa502;
-        animation-delay: 8s;
-        transform: rotate(-15deg);
-      }
-
-      .video:nth-child(10) {
-        top: 40%;
-        left: 45%;
-        border-color: #ff6348;
-        animation-delay: 9s;
-        transform: rotate(28deg);
-      }
-
-      .video:nth-child(11) {
-        bottom: 45%;
-        right: 5%;
-        border-color: #e056fd;
-        animation-delay: 10s;
-        transform: rotate(-18deg);
-      }
-
-      .video:nth-child(12) {
-        top: 75%;
-        right: 35%;
-        border-color: #ff3838;
-        animation-delay: 11s;
-        transform: rotate(12deg);
-      }
-
-      .video:nth-child(13) {
-        bottom: 12%;
-        right: 8%;
-        border-color: #17c0eb;
-        animation-delay: 12s;
-        transform: rotate(-22deg);
-      }
-
-      .video:nth-child(14) {
-        top: 20%;
-        left: 60%;
-        border-color: #7bed9f;
-        animation-delay: 13s;
-        transform: rotate(25deg);
-      }
-
-      .video:nth-child(15) {
-        bottom: 55%;
-        left: 35%;
-        border-color: #ff9f43;
-        animation-delay: 14s;
-        transform: rotate(-5deg);
-      }
-
-      .video:nth-child(16) {
-        top: 85%;
-        left: 8%;
-        border-color: #f8c291;
-        animation-delay: 15s;
-        transform: rotate(16deg);
+        .video:nth-child(1) {
+          top: 3%;
+          left: 2%;
+          border-color: #ff0080;
+          animation-delay: 0s;
+          transform: rotate(-15deg);
+        }
+        .video:nth-child(2) {
+          top: 2%;
+          right: 2%;
+          border-color: #00ff80;
+          animation-delay: 1s;
+          transform: rotate(12deg);
+        }
+        .video:nth-child(3) {
+          top: 12%;
+          left: 35%;
+          border-color: #8000ff;
+          animation-delay: 2s;
+          transform: rotate(-8deg);
+        }
+        .video:nth-child(4) {
+          top: 20%;
+          left: 3%;
+          border-color: #ff8000;
+          animation-delay: 3s;
+          transform: rotate(16deg);
+        }
+        .video:nth-child(5) {
+          top: 18%;
+          right: 25%;
+          border-color: #0080ff;
+          animation-delay: 4s;
+          transform: rotate(-12deg);
+        }
+        .video:nth-child(6) {
+          top: 28%;
+          left: 25%;
+          border-color: #ff4757;
+          animation-delay: 5s;
+          transform: rotate(10deg);
+        }
+        .video:nth-child(7) {
+          top: 25%;
+          right: 3%;
+          border-color: #3742fa;
+          animation-delay: 6s;
+          transform: rotate(-14deg);
+        }
+        .video:nth-child(8) {
+          top: 38%;
+          left: 5%;
+          border-color: #2ed573;
+          animation-delay: 7s;
+          transform: rotate(18deg);
+        }
+        .video:nth-child(9) {
+          top: 35%;
+          right: 28%;
+          border-color: #ffa502;
+          animation-delay: 8s;
+          transform: rotate(-6deg);
+        }
+        .video:nth-child(10) {
+          top: 45%;
+          left: 30%;
+          border-color: #ff6348;
+          animation-delay: 9s;
+          transform: rotate(12deg);
+        }
+        .video:nth-child(11) {
+          top: 42%;
+          right: 5%;
+          border-color: #e056fd;
+          animation-delay: 10s;
+          transform: rotate(-10deg);
+        }
+        .video:nth-child(12) {
+          top: 55%;
+          left: 8%;
+          border-color: #ff3838;
+          animation-delay: 11s;
+          transform: rotate(14deg);
+        }
+        .video:nth-child(13) {
+          top: 52%;
+          right: 25%;
+          border-color: #17c0eb;
+          animation-delay: 12s;
+          transform: rotate(-16deg);
+        }
+        .video:nth-child(14) {
+          top: 65%;
+          left: 25%;
+          border-color: #7bed9f;
+          animation-delay: 13s;
+          transform: rotate(20deg);
+        }
+        .video:nth-child(15) {
+          top: 62%;
+          right: 5%;
+          border-color: #ff9f43;
+          animation-delay: 14s;
+          transform: rotate(-4deg);
+        }
+        .video:nth-child(16) {
+          top: 75%;
+          left: 5%;
+          border-color: #f8c291;
+          animation-delay: 15s;
+          transform: rotate(8deg);
+        }
       }
 
       @keyframes smoothFloat {
@@ -240,22 +479,21 @@
           transform: translateY(0px) rotate(var(--rotation, 0deg));
         }
         25% {
-          transform: translateY(-15px)
-            rotate(calc(var(--rotation, 0deg) + 3deg));
+          transform: translateY(-10px)
+            rotate(calc(var(--rotation, 0deg) + 2deg));
         }
         50% {
-          transform: translateY(-25px) rotate(var(--rotation, 0deg));
+          transform: translateY(-20px) rotate(var(--rotation, 0deg));
         }
         75% {
-          transform: translateY(-10px)
-            rotate(calc(var(--rotation, 0deg) - 3deg));
+          transform: translateY(-5px) rotate(calc(var(--rotation, 0deg) - 2deg));
         }
       }
 
       .sparkle {
         position: absolute;
         color: #fff;
-        font-size: 1.5rem;
+        font-size: clamp(1rem, 3vw, 1.5rem);
         animation: sparkle 3s linear infinite;
         pointer-events: none;
         z-index: 999;
@@ -278,7 +516,7 @@
 
       .emoji-rain {
         position: absolute;
-        font-size: 2rem;
+        font-size: clamp(1.2rem, 4vw, 2rem);
         animation: emojifall linear infinite;
         pointer-events: none;
         z-index: 500;
@@ -299,7 +537,7 @@
         left: 0;
         right: 0;
         bottom: 0;
-        border: 8px solid;
+        border: 4px solid;
         border-image: linear-gradient(45deg, #ff0080, #00ff80, #8000ff, #ff8000)
           1;
         animation: borderPulse 2s ease-in-out infinite;
@@ -310,10 +548,26 @@
       @keyframes borderPulse {
         0%,
         100% {
-          border-width: 8px;
+          border-width: 4px;
         }
         50% {
-          border-width: 15px;
+          border-width: 8px;
+        }
+      }
+
+      @media (min-width: 769px) {
+        .pulsing-border {
+          border-width: 8px;
+        }
+
+        @keyframes borderPulse {
+          0%,
+          100% {
+            border-width: 8px;
+          }
+          50% {
+            border-width: 15px;
+          }
         }
       }
 
@@ -327,10 +581,34 @@
           transform: translateX(0);
         }
         25% {
-          transform: translateX(-3px);
+          transform: translateX(-2px);
         }
         75% {
-          transform: translateX(3px);
+          transform: translateX(2px);
+        }
+      }
+
+      @media (min-width: 769px) {
+        @keyframes shake {
+          0%,
+          100% {
+            transform: translateX(0);
+          }
+          25% {
+            transform: translateX(-3px);
+          }
+          75% {
+            transform: translateX(3px);
+          }
+        }
+      }
+
+      @media (max-width: 480px) {
+        body {
+          -webkit-user-select: none;
+          user-select: none;
+          -webkit-touch-callout: none;
+          -webkit-tap-highlight-color: transparent;
         }
       }
     </style>
@@ -339,67 +617,67 @@
     <div class="pulsing-border"></div>
 
     <div class="video-container">
-      <video class="video" autoplay muted loop>
+      <video class="video" autoplay muted loop playsinline>
         <source src="1.mp4" type="video/mp4" />
       </video>
 
-      <video class="video" autoplay muted loop>
+      <video class="video" autoplay muted loop playsinline>
         <source src="2.mp4" type="video/mp4" />
       </video>
 
-      <video class="video" autoplay muted loop>
+      <video class="video" autoplay muted loop playsinline>
         <source src="3.mp4" type="video/mp4" />
       </video>
 
-      <video class="video" autoplay muted loop>
+      <video class="video" autoplay muted loop playsinline>
         <source src="4.mp4" type="video/mp4" />
       </video>
 
-      <video class="video" autoplay muted loop>
+      <video class="video" autoplay muted loop playsinline>
         <source src="5.mp4" type="video/mp4" />
       </video>
 
-      <video class="video" autoplay muted loop>
+      <video class="video" autoplay muted loop playsinline>
         <source src="6.mp4" type="video/mp4" />
       </video>
 
-      <video class="video" autoplay muted loop>
+      <video class="video" autoplay muted loop playsinline>
         <source src="7.mp4" type="video/mp4" />
       </video>
 
-      <video class="video" autoplay muted loop>
+      <video class="video" autoplay muted loop playsinline>
         <source src="8.mp4" type="video/mp4" />
       </video>
 
-      <video class="video" autoplay muted loop>
+      <video class="video" autoplay muted loop playsinline>
         <source src="9.mp4" type="video/mp4" />
       </video>
 
-      <video class="video" autoplay muted loop>
+      <video class="video" autoplay muted loop playsinline>
         <source src="10.mp4" type="video/mp4" />
       </video>
 
-      <video class="video" autoplay muted loop>
+      <video class="video" autoplay muted loop playsinline>
         <source src="11.mp4" type="video/mp4" />
       </video>
 
-      <video class="video" autoplay muted loop>
+      <video class="video" autoplay muted loop playsinline>
         <source src="12.mp4" type="video/mp4" />
       </video>
 
-      <video class="video" autoplay muted loop>
+      <video class="video" autoplay muted loop playsinline>
         <source src="13.mp4" type="video/mp4" />
       </video>
 
-      <video class="video" autoplay muted loop>
+      <video class="video" autoplay muted loop playsinline>
         <source src="14.mp4" type="video/mp4" />
       </video>
 
-      <video class="video" autoplay muted loop>
+      <video class="video" autoplay muted loop playsinline>
         <source src="15.mp4" type="video/mp4" />
       </video>
 
-      <video class="video" autoplay muted loop>
+      <video class="video" autoplay muted loop playsinline>
         <source src="16.mp4" type="video/mp4" />
       </video>
     </div>
@@ -407,7 +685,6 @@
     <div class="main-text">БЕЛЯКОВ<br />НИКИТА<br />N3445</div>
 
     <script>
-      // Создание блесток
       function createSparkle() {
         const sparkle = document.createElement("div");
         sparkle.className = "sparkle";
@@ -422,7 +699,6 @@
         setTimeout(() => sparkle.remove(), 5000);
       }
 
-      // Создание дождя из эмодзи
       function createEmojiRain() {
         const emoji = document.createElement("div");
         emoji.className = "emoji-rain";
@@ -447,15 +723,22 @@
         setTimeout(() => emoji.remove(), 5000);
       }
 
-      // Добавление тряски при клике
       document.addEventListener("click", () => {
         document.body.classList.add("shake");
         setTimeout(() => document.body.classList.remove("shake"), 500);
       });
 
-      // Запуск эффектов
-      setInterval(createSparkle, 800);
-      setInterval(createEmojiRain, 600); // Дождь из эмодзи каждые 600мс
+      document.addEventListener("touchstart", () => {
+        document.body.classList.add("shake");
+        setTimeout(() => document.body.classList.remove("shake"), 500);
+      });
+
+      const isMobile = window.innerWidth <= 480;
+      const sparkleInterval = isMobile ? 1200 : 800;
+      const emojiInterval = isMobile ? 900 : 600;
+
+      setInterval(createSparkle, sparkleInterval);
+      setInterval(createEmojiRain, emojiInterval);
     </script>
   </body>
 </html>
