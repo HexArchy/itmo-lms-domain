@@ -3,114 +3,459 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Угон домена/</title>
+    <title>БЕЛЯКОВ НИКИТА N3445</title>
     <style>
+      @import url("https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&display=swap");
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
       body {
-        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-        max-width: 800px;
-        margin: 0 auto;
-        padding: 40px 20px;
-        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-        color: white;
+        font-family: "Comic Neue", cursive;
+        background: linear-gradient(
+          45deg,
+          #ff6b6b,
+          #4ecdc4,
+          #45b7d1,
+          #96ceb4,
+          #feca57,
+          #ff9ff3,
+          #54a0ff
+        );
+        background-size: 400% 400%;
+        animation: rainbowBg 3s ease infinite;
+        overflow: hidden;
         min-height: 100vh;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
+        cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"><text y="16" font-size="16">🤡</text></svg>'),
+          auto;
       }
 
-      .container {
-        background: rgba(255, 255, 255, 0.1);
-        backdrop-filter: blur(10px);
-        border-radius: 20px;
-        padding: 40px;
-        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+      @keyframes rainbowBg {
+        0% {
+          background-position: 0% 50%;
+        }
+        50% {
+          background-position: 100% 50%;
+        }
+        100% {
+          background-position: 0% 50%;
+        }
       }
 
-      h1 {
-        text-align: center;
-        font-size: 2.5em;
-        margin-bottom: 30px;
-        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-      }
-
-      .info-block {
-        background: rgba(255, 255, 255, 0.2);
-        border-radius: 15px;
-        padding: 25px;
-        margin: 20px 0;
-        border-left: 5px solid #fff;
-      }
-
-      .label {
-        font-weight: bold;
-        font-size: 1.1em;
-        opacity: 0.9;
-        margin-bottom: 5px;
-      }
-
-      .value {
-        font-size: 1.4em;
-        font-weight: 600;
+      .main-text {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: clamp(2rem, 8vw, 6rem);
+        font-weight: 700;
         color: #fff;
-        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
-      }
-
-      .success-message {
+        text-shadow: 3px 3px 0px #000, 6px 6px 0px #ff0080, 9px 9px 0px #00ff80,
+          12px 12px 0px #8000ff;
+        animation: bounce 2s infinite, rotate 10s linear infinite;
+        z-index: 1000;
         text-align: center;
-        background: rgba(76, 175, 80, 0.3);
-        border-radius: 10px;
-        padding: 20px;
-        margin-top: 30px;
-        border: 2px solid rgba(76, 175, 80, 0.6);
+        line-height: 1.2;
       }
 
-      .technical-info {
-        margin-top: 40px;
-        font-size: 0.9em;
-        opacity: 0.8;
-        text-align: center;
-      }
-
-      @keyframes fadeIn {
-        from {
-          opacity: 0;
-          transform: translateY(20px);
+      @keyframes bounce {
+        0%,
+        20%,
+        50%,
+        80%,
+        100% {
+          transform: translate(-50%, -50%) translateY(0);
         }
-        to {
+        40% {
+          transform: translate(-50%, -50%) translateY(-30px);
+        }
+        60% {
+          transform: translate(-50%, -50%) translateY(-15px);
+        }
+      }
+
+      @keyframes rotate {
+        0% {
+          transform: translate(-50%, -50%) rotate(0deg);
+        }
+        100% {
+          transform: translate(-50%, -50%) rotate(360deg);
+        }
+      }
+
+      .video-container {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        z-index: 1;
+      }
+
+      .video {
+        position: absolute;
+        width: 200px;
+        height: 150px;
+        border-radius: 15px;
+        border: 3px solid;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+        animation: smoothFloat 8s ease-in-out infinite;
+      }
+
+      /* Хаотичное расположение */
+      .video:nth-child(1) {
+        top: 8%;
+        left: 3%;
+        border-color: #ff0080;
+        animation-delay: 0s;
+        transform: rotate(-25deg);
+      }
+
+      .video:nth-child(2) {
+        top: 2%;
+        left: 35%;
+        border-color: #00ff80;
+        animation-delay: 1s;
+        transform: rotate(18deg);
+      }
+
+      .video:nth-child(3) {
+        top: 15%;
+        right: 8%;
+        border-color: #8000ff;
+        animation-delay: 2s;
+        transform: rotate(-12deg);
+      }
+
+      .video:nth-child(4) {
+        top: 30%;
+        left: 8%;
+        border-color: #ff8000;
+        animation-delay: 3s;
+        transform: rotate(22deg);
+      }
+
+      .video:nth-child(5) {
+        top: 45%;
+        right: 15%;
+        border-color: #0080ff;
+        animation-delay: 4s;
+        transform: rotate(-8deg);
+      }
+
+      .video:nth-child(6) {
+        bottom: 35%;
+        left: 12%;
+        border-color: #ff4757;
+        animation-delay: 5s;
+        transform: rotate(15deg);
+      }
+
+      .video:nth-child(7) {
+        bottom: 20%;
+        right: 25%;
+        border-color: #3742fa;
+        animation-delay: 6s;
+        transform: rotate(-20deg);
+      }
+
+      .video:nth-child(8) {
+        bottom: 8%;
+        left: 40%;
+        border-color: #2ed573;
+        animation-delay: 7s;
+        transform: rotate(10deg);
+      }
+
+      .video:nth-child(9) {
+        top: 60%;
+        left: 25%;
+        border-color: #ffa502;
+        animation-delay: 8s;
+        transform: rotate(-15deg);
+      }
+
+      .video:nth-child(10) {
+        top: 40%;
+        left: 45%;
+        border-color: #ff6348;
+        animation-delay: 9s;
+        transform: rotate(28deg);
+      }
+
+      .video:nth-child(11) {
+        bottom: 45%;
+        right: 5%;
+        border-color: #e056fd;
+        animation-delay: 10s;
+        transform: rotate(-18deg);
+      }
+
+      .video:nth-child(12) {
+        top: 75%;
+        right: 35%;
+        border-color: #ff3838;
+        animation-delay: 11s;
+        transform: rotate(12deg);
+      }
+
+      .video:nth-child(13) {
+        bottom: 12%;
+        right: 8%;
+        border-color: #17c0eb;
+        animation-delay: 12s;
+        transform: rotate(-22deg);
+      }
+
+      .video:nth-child(14) {
+        top: 20%;
+        left: 60%;
+        border-color: #7bed9f;
+        animation-delay: 13s;
+        transform: rotate(25deg);
+      }
+
+      .video:nth-child(15) {
+        bottom: 55%;
+        left: 35%;
+        border-color: #ff9f43;
+        animation-delay: 14s;
+        transform: rotate(-5deg);
+      }
+
+      .video:nth-child(16) {
+        top: 85%;
+        left: 8%;
+        border-color: #f8c291;
+        animation-delay: 15s;
+        transform: rotate(16deg);
+      }
+
+      @keyframes smoothFloat {
+        0%,
+        100% {
+          transform: translateY(0px) rotate(var(--rotation, 0deg));
+        }
+        25% {
+          transform: translateY(-15px)
+            rotate(calc(var(--rotation, 0deg) + 3deg));
+        }
+        50% {
+          transform: translateY(-25px) rotate(var(--rotation, 0deg));
+        }
+        75% {
+          transform: translateY(-10px)
+            rotate(calc(var(--rotation, 0deg) - 3deg));
+        }
+      }
+
+      .sparkle {
+        position: absolute;
+        color: #fff;
+        font-size: 1.5rem;
+        animation: sparkle 3s linear infinite;
+        pointer-events: none;
+        z-index: 999;
+      }
+
+      @keyframes sparkle {
+        0% {
+          transform: scale(0) rotate(0deg);
           opacity: 1;
-          transform: translateY(0);
+        }
+        50% {
+          transform: scale(1) rotate(180deg);
+          opacity: 1;
+        }
+        100% {
+          transform: scale(0) rotate(360deg);
+          opacity: 0;
         }
       }
 
-      .container > * {
-        animation: fadeIn 0.6s ease-out forwards;
+      .emoji-rain {
+        position: absolute;
+        font-size: 2rem;
+        animation: emojifall linear infinite;
+        pointer-events: none;
+        z-index: 500;
+      }
+
+      @keyframes emojifall {
+        0% {
+          transform: translateY(-100vh) rotate(0deg);
+        }
+        100% {
+          transform: translateY(100vh) rotate(360deg);
+        }
+      }
+
+      .pulsing-border {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        border: 8px solid;
+        border-image: linear-gradient(45deg, #ff0080, #00ff80, #8000ff, #ff8000)
+          1;
+        animation: borderPulse 2s ease-in-out infinite;
+        pointer-events: none;
+        z-index: 2000;
+      }
+
+      @keyframes borderPulse {
+        0%,
+        100% {
+          border-width: 8px;
+        }
+        50% {
+          border-width: 15px;
+        }
+      }
+
+      .shake {
+        animation: shake 0.5s ease-in-out infinite;
+      }
+
+      @keyframes shake {
+        0%,
+        100% {
+          transform: translateX(0);
+        }
+        25% {
+          transform: translateX(-3px);
+        }
+        75% {
+          transform: translateX(3px);
+        }
       }
     </style>
   </head>
   <body>
-    <div class="container">
-      <h1>Угон домена</h1>
+    <div class="pulsing-border"></div>
 
-      <div class="info-block">
-        <div class="label">Фамилия и имя:</div>
-        <div class="value">Беляков Никита</div>
-      </div>
+    <div class="video-container">
+      <video class="video" autoplay muted loop>
+        <source src="1.mp4" type="video/mp4" />
+      </video>
 
-      <div class="info-block">
-        <div class="label">ИСУ:</div>
-        <div class="value">373717</div>
-      </div>
+      <video class="video" autoplay muted loop>
+        <source src="2.mp4" type="video/mp4" />
+      </video>
 
-      <div class="success-message">
-        <h2>Домен взят</h2>
-        <p>GitHub Pages взял свой же домен</p>
-      </div>
+      <video class="video" autoplay muted loop>
+        <source src="3.mp4" type="video/mp4" />
+      </video>
 
-      <div class="technical-info">
-        <p><strong>Метод:</strong> GitHub Pages</p>
-        <p><strong>CNAME:</strong> github.io</p>
-        <p><strong>Статус:</strong> Активен</p>
-      </div>
+      <video class="video" autoplay muted loop>
+        <source src="4.mp4" type="video/mp4" />
+      </video>
+
+      <video class="video" autoplay muted loop>
+        <source src="5.mp4" type="video/mp4" />
+      </video>
+
+      <video class="video" autoplay muted loop>
+        <source src="6.mp4" type="video/mp4" />
+      </video>
+
+      <video class="video" autoplay muted loop>
+        <source src="7.mp4" type="video/mp4" />
+      </video>
+
+      <video class="video" autoplay muted loop>
+        <source src="8.mp4" type="video/mp4" />
+      </video>
+
+      <video class="video" autoplay muted loop>
+        <source src="9.mp4" type="video/mp4" />
+      </video>
+
+      <video class="video" autoplay muted loop>
+        <source src="10.mp4" type="video/mp4" />
+      </video>
+
+      <video class="video" autoplay muted loop>
+        <source src="11.mp4" type="video/mp4" />
+      </video>
+
+      <video class="video" autoplay muted loop>
+        <source src="12.mp4" type="video/mp4" />
+      </video>
+
+      <video class="video" autoplay muted loop>
+        <source src="13.mp4" type="video/mp4" />
+      </video>
+
+      <video class="video" autoplay muted loop>
+        <source src="14.mp4" type="video/mp4" />
+      </video>
+
+      <video class="video" autoplay muted loop>
+        <source src="15.mp4" type="video/mp4" />
+      </video>
+
+      <video class="video" autoplay muted loop>
+        <source src="16.mp4" type="video/mp4" />
+      </video>
     </div>
+
+    <div class="main-text">БЕЛЯКОВ<br />НИКИТА<br />N3445</div>
+
+    <script>
+      // Создание блесток
+      function createSparkle() {
+        const sparkle = document.createElement("div");
+        sparkle.className = "sparkle";
+        sparkle.innerHTML = ["✨", "⭐", "💫", "🌟"][
+          Math.floor(Math.random() * 4)
+        ];
+        sparkle.style.left = Math.random() * 100 + "%";
+        sparkle.style.top = Math.random() * 100 + "%";
+        sparkle.style.animationDuration = Math.random() * 3 + 2 + "s";
+        document.body.appendChild(sparkle);
+
+        setTimeout(() => sparkle.remove(), 5000);
+      }
+
+      // Создание дождя из эмодзи
+      function createEmojiRain() {
+        const emoji = document.createElement("div");
+        emoji.className = "emoji-rain";
+        emoji.innerHTML = [
+          "🤡",
+          "😂",
+          "🎉",
+          "🎊",
+          "🌈",
+          "🎭",
+          "🎪",
+          "🎨",
+          "🔥",
+          "💥",
+          "⚡",
+          "🌟",
+        ][Math.floor(Math.random() * 12)];
+        emoji.style.left = Math.random() * 100 + "%";
+        emoji.style.animationDuration = Math.random() * 3 + 2 + "s";
+        document.body.appendChild(emoji);
+
+        setTimeout(() => emoji.remove(), 5000);
+      }
+
+      // Добавление тряски при клике
+      document.addEventListener("click", () => {
+        document.body.classList.add("shake");
+        setTimeout(() => document.body.classList.remove("shake"), 500);
+      });
+
+      // Запуск эффектов
+      setInterval(createSparkle, 800);
+      setInterval(createEmojiRain, 600); // Дождь из эмодзи каждые 600мс
+    </script>
   </body>
 </html>
